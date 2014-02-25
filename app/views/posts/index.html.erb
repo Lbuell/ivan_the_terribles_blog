@@ -1,26 +1,8 @@
 <h1>Ivan the Terrible's Blog</h1>
 
 <section class="blog">
-<% cache @post do %>
-  <%= will_paginate @posts %>
-<% @posts.each do |post| %>
-    <section class="post">
-      <h2><%= link_to post.title, post_path(post) %></h2>
-      <div class="post_nav">
-        <%= link_to 'Edit', edit_post_path(post) %> |
-        <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %>
-      </div>
-      <div><%= post.body %></div>
-      <div class="comments">
-        <div id="<%= "show_comments" + post.id.to_s %>">
-        <% link_text = "Comments (" + post.comments.count.to_s + ")" %>
-          <%= link_to link_text, :controller => "posts", :action => "comments", id: post.id, remote: true %>
-        </div>
-      </div>
-    </section>
-  <% end %>
-<% end %>
 
+  <%= render @posts %>
 
 </section>
 
