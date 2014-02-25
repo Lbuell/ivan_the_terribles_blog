@@ -9,6 +9,8 @@ gem 'pg'
 gem 'cache_digests'
 gem 'will_paginate', '~> 3.0'
 gem 'heroku_rails_deflate', :group => :production
+gem 'memcachier'
+gem 'dalli'
 
 # Gems used only for assets and not required
 # in production environments by default.
