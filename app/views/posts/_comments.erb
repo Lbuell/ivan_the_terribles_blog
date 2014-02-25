@@ -1,0 +1,10 @@
+<div class="comment">
+  <% @comments.each do |c| %>
+    <p><%= c.body %></p>
+    <div class="reply">
+      <% c.replies.each do |r| %>
+        <p><%= r.body %></p>
+      <% end %>
+    </div>
+  <% end %>
+</div>

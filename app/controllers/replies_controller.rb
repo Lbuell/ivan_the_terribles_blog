@@ -2,8 +2,7 @@ class RepliesController < ApplicationController
   # GET /replies
   # GET /replies.json
   def index
-    @replies = Reply.all
-
+    @replies = Reply.order('created_at').includes(:comment)
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @replies }
@@ -14,6 +13,7 @@ class RepliesController < ApplicationController
   # GET /replies/1.json
   def show
     @reply = Reply.find(params[:id])
+    @replies = Reply.paginate(:page => params[:page])
 
     respond_to do |format|
       format.html # show.html.erb

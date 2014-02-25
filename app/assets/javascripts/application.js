@@ -13,3 +13,20 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+$(function(){ $(document).foundation(); });
+
+jQuery.fn.submitOnCheck = function() {
+  this.find('input[type=submit]').remove();
+  this.find('input[type=checkbox]').click(function() {
+    $(this).parent('form').submit();
+  });
+  return this;
+}
+
+$(function() {
+  $('.show_post').submitOnCheck();
+});
+
+$(function() {
+  $('.edit_post').submitOnCheck();
+});

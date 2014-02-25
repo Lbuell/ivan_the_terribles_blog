@@ -2,22 +2,22 @@ class CommentsController < ApplicationController
   # GET /comments
   # GET /comments.json
   def index
-    @comments = Comment.all
-
+    #@comments = Comment.order('created_at').includes(:post)
     respond_to do |format|
       format.html # index.html.erb
-      format.json { render json: @comments }
+      format.js
     end
   end
 
   # GET /comments/1
   # GET /comments/1.json
   def show
-    @comment = Comment.find(params[:id])
-
+    #@comments = Comment.page params[:page]
+    #@comment = Comment.find(params[:id])
+    @comments = Comment.paginate(:page => params[:page])
     respond_to do |format|
       format.html # show.html.erb
-      format.json { render json: @comment }
+      format.js
     end
   end
 
