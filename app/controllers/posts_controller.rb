@@ -1,14 +1,11 @@
 class PostsController < ApplicationController
+  caches_page :index
+  caches_page :page
   # GET /posts
   # GET /posts.json
   def index
-    #@posts = Post.includes(:comments => :replies)
-    @posts = Post.paginate(:page => params[:page], :per_page => 60)
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @posts }
-
-    end
+    @posts = Post.includes(:comments => :replies)
+    #@posts = Post.all
   end
 
   def comments
