@@ -47,7 +47,6 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.7.0)
-    dalli (2.7.0)
     debug_inspector (0.0.2)
     diff-lcs (1.2.5)
     erubis (2.7.0)
@@ -157,7 +156,6 @@ DEPENDENCIES
   binding_of_caller
   cache_digests
   coffee-rails (~> 3.2.1)
-  dalli
   faker
   heroku_rails_deflate
   hirb
