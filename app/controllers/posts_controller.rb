@@ -2,13 +2,7 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
-    #@posts = Post.includes(:comments => :replies)
-    @posts = Post.page params[:page]
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @posts }
-
-    end
+    @posts = Post.includes(:comments => :replies)
   end
 
   def comments
