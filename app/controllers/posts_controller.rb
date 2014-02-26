@@ -2,14 +2,8 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
-    @posts = Post.includes(:comments => :replies)
+    @posts = Post.includes(:comments => :replies).find(params[:id])
   end
-
-  def comments
-    @post = Post.find(params[:id])
-    @comments = @post.comments
-  end
-
 
   # GET /posts/1
   # GET /posts/1.json
