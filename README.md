@@ -27,9 +27,13 @@ Final score 281
 Improvements i made
 
 Eager Loading
+
 Added index for comments and replies
+
 Caching of pages using Cache_digest
+
 Deflate Gem
+
 Unicorn server to get more workers
 
 
