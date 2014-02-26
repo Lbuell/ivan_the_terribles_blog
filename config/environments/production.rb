@@ -7,7 +7,7 @@ IvanTheTerriblesBlog::Application.configure do
   # Full error reports are disabled and caching is turned on
   config.consider_all_requests_local       = false
   config.action_controller.perform_caching = true
-  config.action_controller.asset_host = "//#{ENV['FOG_DIRECTORY']}.s3.amazonaws.com"
+  #config.action_controller.asset_host = "//#{ENV['FOG_DIRECTORY']}.s3.amazonaws.com"
   # Disable Rails's static asset server (Apache or nginx will already do this)
   config.serve_static_assets = true
   # Compress JavaScripts and CSS
@@ -18,7 +18,7 @@ IvanTheTerriblesBlog::Application.configure do
 
   # Generate digests for assets URLs
   config.assets.digest = true
-  config.assets.enabled = true
+  #config.assets.enabled = true
 
   # Defaults to nil and saved in location specified by config.assets.prefix
   # config.assets.manifest = YOUR_PATH
