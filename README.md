@@ -22,7 +22,7 @@ My Load Impact results
 
 https://loadimpact.com/test/view/1599047
 
-Final score 295
+Final score 281
 
 ## Information
 
