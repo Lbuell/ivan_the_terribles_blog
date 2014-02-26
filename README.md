@@ -37,10 +37,6 @@ Deflate Gem
 Unicorn server to get more workers
 
 
-## Information
-
-  A small Opal app that turns a Ruby LL into a OO Javascript Linked list.    There are two files for this assignment, the first is with an array and the 2nd is without
-
 ### Known Issues
 
 If you discover any bugs, feel free to create an issue on GitHub fork and
